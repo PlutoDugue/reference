@@ -839,6 +839,17 @@ method.invoke(classLoader, url);
 - `LocalTime` 表示没有时区的时间，只包含时分秒，不可变并且线程安全的，java8 及以上版本可用
 - `LocalDateTime` 表示没有时区的日期时间，同时包含年月日时分秒，不可变并且线程安全的，java8 及以上版本可用
 
+### swing gui 窗口居中速查
+
+```java
+JFrame frame = new JFrame("Java示例程序");
+frame.setSize(300, 300);
+Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+int x = (int) (screenSize.getWidth() / 2 - frame.getWidth() / 2);
+int y = (int) (screenSize.getHeight() / 2 - frame.getHeight() / 2);
+frame.setLocation(x, y);
+```
+
 另见
 ---
 
